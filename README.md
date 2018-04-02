@@ -14,9 +14,7 @@ Summary: Python implementation of standards from The InternationalAssociation fo
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/iapws-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/iapws-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/iapws-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/iapws-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/iapws-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/iapws-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/iapws-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/iapws-feedstock)
 
 Current release info
 ====================
