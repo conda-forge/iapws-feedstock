@@ -5,7 +5,7 @@ package:
   version: {{version}}
 
 source:
-  url: https://pypi.io/packages/sourcei/iapws/iapws-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/i/iapws/iapws-{{ version }}.tar.gz
   sha256: 5ca65ea896eefc46ceaaf6628554633eeeeecef6a99c1a62284edae46d6430aa
 
 build:
