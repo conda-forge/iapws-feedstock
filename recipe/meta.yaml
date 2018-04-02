@@ -1,31 +1,27 @@
-{% set name = "iapws" %}
 {% set version = "1.3" %}
-{% set sha256 = "5ca65ea896eefc46ceaaf6628554633eeeeecef6a99c1a62284edae46d6430aa" %}
 
 package:
-  name: {{name}}
+  name: iapws
   version: {{version}}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/sourcei/iapws/iapws-{{ version }}.tar.gz
+  sha256: 5ca65ea896eefc46ceaaf6628554633eeeeecef6a99c1a62284edae46d6430aa
 
 build:
-  script: python setup.py install --single-version-externally-managed --record=record.txt
   number: 0
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
     - scipy
-
   run:
     - python
     - scipy
 
 test:
-  # Python imports
   imports:
     - iapws
 
