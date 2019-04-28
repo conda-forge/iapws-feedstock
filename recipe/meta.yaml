@@ -1,4 +1,4 @@
-{% set version = "1.3" %}
+{% set version = "1.4" %}
 
 package:
   name: iapws
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/iapws/iapws-{{ version }}.tar.gz
-  sha256: 5ca65ea896eefc46ceaaf6628554633eeeeecef6a99c1a62284edae46d6430aa
+  sha256: 3d7a7a17343157dacd3f654b7f82d1974492209756c4de99332d4f6b375227e6
 
 build:
   noarch: python
