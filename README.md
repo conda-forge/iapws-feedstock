@@ -3,7 +3,7 @@ About iapws
 
 Home: https://github.com/jjgomera/iapws
 
-Package license: GPL-3.0
+Package license: GPL-3.0-or-later
 
 Feedstock license: BSD 3-Clause
 
