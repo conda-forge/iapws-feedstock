@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -25,10 +25,15 @@ requirements:
 test:
   imports:
     - iapws
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/jjgomera/iapws
-  license: GPL-3.0
+  license: GPL-3.0-or-later
+  license_file: LICENSE
   summary: Python implementation of standards from The InternationalAssociation for the Properties of Water and Steam
   license_family: GPL3
 
