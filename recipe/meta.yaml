@@ -1,17 +1,17 @@
-{% set version = "1.4" %}
+{% set version = "1.4.1" %}
 
 package:
   name: iapws
-  version: {{version}}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/i/iapws/iapws-{{ version }}.tar.gz
-  sha256: 3d7a7a17343157dacd3f654b7f82d1974492209756c4de99332d4f6b375227e6
+  sha256: d65c813bb6b100a8d1ed79e00148832a0321b3063e9632a990344890acb02493
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -25,11 +25,16 @@ requirements:
 test:
   imports:
     - iapws
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/jjgomera/iapws
-  license: GPL-3.0
-  summary: 'Python implementation of standards from The InternationalAssociation for the Properties of Water and Steam'
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  summary: Python implementation of standards from The InternationalAssociation for the Properties of Water and Steam
   license_family: GPL3
 
 extra:
