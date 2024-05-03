@@ -1,5 +1,5 @@
 {% set name = "iapws" %}
-{% set version = "1.5.3" %}
+{% set version = "1.5.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/iapws-{{ version }}.tar.gz
-  sha256: 415c5b7fd105f58c0054f7b002a85cd56643ea356bfeb157414c3f8c9ee49035
+  sha256: 9f0faa39a967d76fc5e5f95f61d922e135453192e02bf875d07242f13d6eaa55
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - scipy >=1.2
 
 test:
@@ -40,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - tntmatthews
+    - ocefpaf
