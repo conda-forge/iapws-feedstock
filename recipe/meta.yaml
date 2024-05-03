@@ -11,15 +11,15 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - scipy >=1.2
 
 test:
@@ -40,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - tntmatthews
+    - ocefpaf
